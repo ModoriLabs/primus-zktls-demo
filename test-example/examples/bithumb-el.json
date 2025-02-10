@@ -1,0 +1,34 @@
+{
+    "recipient": "0x189027e3C77b3a92fd01bF7CC4E6a86E77F5034E",
+    "request": {
+        "url": "https://gw.bithumb.com/exchange/v1/coin-inout/withdraw/C0283/limit?_=1738648834807&retry=0",
+        "header": "",
+        "method": "GET",
+        "body": ""
+    },
+    "reponseResolve": [
+        {
+            "keyName": "assetQuantity",
+            "parseType": "",
+            "parsePath": "$.data.assetQuantity"
+        },
+        {
+            "keyName": "availableQuantity",
+            "parseType": "",
+            "parsePath": "$.data.availableQuantity"
+        }
+    ],
+    "data": "{\"assetQuantity\":\"31772.45168243\",\"availableQuantity\":\"31772.45168243\"}",
+    "attConditions": "[{\"op\":\"REVEAL_STRING\",\"field\":\"$.data.assetQuantity\"},{\"op\":\"REVEAL_STRING\",\"field\":\"$.data.availableQuantity\"}]",
+    "timestamp": 1738648837785,
+    "additionParams": "",
+    "attestors": [
+        {
+            "attestorAddr": "0xdb736b13e2f522dbe18b2015d0291e4b193d8ef6",
+            "url": "https://primuslabs.xyz"
+        }
+    ],
+    "signatures": [
+        "0x6daa83e36b85a03b91c5291514ebb875fe60a0f4c69d7d335ca2b28f3a8bed9f7db5b2636390882400b0caeb54e074d1f554986bc807bf9ce4516363170ffe841c"
+    ]
+}

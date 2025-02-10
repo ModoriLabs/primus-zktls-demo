@@ -9,21 +9,21 @@ console.log("primusProof initAttestaionResult=", initAttestaionResult);
 
 export async function primusProofTest() {
     // Set TemplateID and user address.
-    const attTemplateID = "044feebb-19e7-4152-a0a6-404b81f65ee4";
-    const userAddress = "0x7ab44DE0156925fe0c24482a2cDe48C465e47573";
+    const attTemplateID = "b89b0bab-0a52-420d-91c1-e8008bb4a865";
+    const userAddress = "0x189027e3C77b3a92fd01bF7CC4E6a86E77F5034E";
     // Generate attestation request.
     const request = primusZKTLS.generateRequestParams(attTemplateID, userAddress);
 
     // request.setAttMode({
     //     algorithmType: "proxytls"
     // });
-    
+
     // Transfer request object to string.
     const requestStr = request.toJsonString();
 
     // Sign request.
     const signedRequestStr = await primusZKTLS.sign(requestStr);
-    
+
     // Start attestation process.
     const attestation = await primusZKTLS.startAttestation(signedRequestStr);
     console.log("attestation=", attestation);
